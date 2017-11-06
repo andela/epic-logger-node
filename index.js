@@ -31,7 +31,7 @@ const transports = [
     }),
   ];
 
-if (env === 'production') {
+if (env === 'production' || env === 'staging' ) {
   bugsnag.register(process.env.BUGSNAG_API_KEY);
   transports.push(new BugsnagTransport());
 }
